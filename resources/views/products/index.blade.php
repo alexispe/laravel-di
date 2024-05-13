@@ -4,7 +4,7 @@
     <ul>
         @foreach($products as $product)
             <li>
-                <a href="{{ route('products.show', $product) }}">{{ $product->name }}</a> : {{ $product->price / 100 }} €
+                <a href="{{ route('products.show', $product) }}">{{ $product->name }}</a> : {{ $product->price / 100 }} € - {{ $product->category->name }}
             </li>
         @endforeach
     </ul>
