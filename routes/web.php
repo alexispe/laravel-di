@@ -12,3 +12,9 @@ Route::get('/', function () {
 
 Route::resource('products', ProductController::class);
 
+Route::get('/login', [App\Http\Controllers\LoginController::class, 'login'])->name('login');
+Route::post('/login', [App\Http\Controllers\LoginController::class, 'authenticate']);
+
+
+
+

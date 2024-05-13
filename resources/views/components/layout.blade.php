@@ -18,6 +18,15 @@
                             <a class="nav-link" href="{{ route('products.create') }}">Créer produit</a>
                         </li>
                     </ul>
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        @auth
+                            Bonjour {{ auth()->user()->name }}
+                        @else
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}">Connexion</a>
+                            </li>
+                        @endauth
+                    </ul>
                 </div>
             </div>
         </nav>
